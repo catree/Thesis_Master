@@ -7,6 +7,8 @@ From NASA :
 https://github.com/marknabil/visionworkbench
 
 
+https://github.com/marknabil/whitebox-geospatial-analysis-tools
+
 #Mosaicing
 
 http://conservationdrones.org/post-processing/
