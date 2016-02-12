@@ -15,6 +15,10 @@ http://conservationdrones.org/post-processing/
 
 https://github.com/marknabil/OpenDroneMap
 
+#Lectures
+https://courses.cs.washington.edu/courses/csep576/15sp/lectures/mosaic.pdf
+
+#papers 
 
 #keywords : 
 Ortho Images . 
