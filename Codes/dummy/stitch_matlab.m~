@@ -25,9 +25,10 @@ vis=zeros(h1*4,w1*4,x1);
 
 %%
 %if (length(xy)==length(img_array))
-for i=0:length(xy)-1
+for ii=0:length(xy)-1
 %     vis(xy(i,1):h1+xy(i,1)-1, xy(i,2):w1+xy(i,2)-1,:) = img1(:,:,:);
-    vis(xy(i,1):h1+xy(i,1)-1, xy(i,2):w1+xy(i,2)-1,:) = img_array(:,i*h1:i*h1+h1,:);
+
+    vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
 
 
 end
@@ -43,3 +44,21 @@ end
 vis(1:h2, w1:w1+w2-1,:) = img2;
 
 imshow(vis,[])
+
+
+%% Read text file of co-ordinates
+
+% it will only work if the file is text and is comma separated.
+
+% if you want to work with space then change the formatSpec remove the ,
+% and add space .
+
+% sizeA=[2 Inf];
+% %sizeA=[Inf 2];
+% 
+% fileId=fopen('coordinates_dummy.txt','r') ;
+% formatSpec = '%d,%d';
+% 
+% [A size]=fscanf(fileId,formatSpec,sizeA);
+% A=A'
+% fclose(fileId);

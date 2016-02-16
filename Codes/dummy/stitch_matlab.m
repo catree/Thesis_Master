@@ -5,6 +5,7 @@ clear all , close all , clc;
 path = '~/Downloads/Download/Image Mosaicing';
 im=fullfile(path,'lena_color.jpg');
 img1 = imread(im);
+
 [xy]= [50,50;1200,1100;2300,200;1500,1150];
 
 %img1=double(img1);
@@ -44,3 +45,21 @@ end
 vis(1:h2, w1:w1+w2-1,:) = img2;
 
 imshow(vis,[])
+
+
+%% Read text file of co-ordinates
+
+% it will only work if the file is text and is comma separated.
+
+% if you want to work with space then change the formatSpec remove the ,
+% and add space .
+
+% sizeA=[2 Inf];
+% %sizeA=[Inf 2];
+% 
+% fileId=fopen('coordinates_dummy.txt','r') ;
+% formatSpec = '%d,%d';
+% 
+% [A size]=fscanf(fileId,formatSpec,sizeA);
+% A=A'
+% fclose(fileId);
