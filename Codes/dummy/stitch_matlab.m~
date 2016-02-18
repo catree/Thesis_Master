@@ -3,34 +3,85 @@
 clear all , close all , clc;
 
 path = '~/Downloads/Download/Image Mosaicing';
-im=fullfile(path,'lena_color.jpg');
-img1 = imread(im);
-[xy]= [50,50;1200,1100;2300,200;1500,1150];
+%im=fullfile(path,'lena_color.jpg');
 
+im='frame0000_1.jpg';
+img1 = imread(im);
+
+im='frame0000_2.jpg';
+img2 = imread(im);
+
+% im='frame0000_3.jpg';
+% img3 = imread(im);
+
+im='frame0000_3_zoomed.jpg';
+img3 = imread(im);
+
+% im='frame0000_4.jpg';
+% img4 = imread(im);
+
+img1=rgb2gray(img1);
+img2=rgb2gray(img2);
+img3=rgb2gray(img3);
+
+%img4=rgb2gray(img4);
+
+% read : http://fr.mathworks.com/help/images/ref/imresize.html
+img3 = imresize(img3, 0.5);
+
+%%
+
+% [xy]= [150,250;450,250;750,250];
+% xy=[xy(:,2) xy(:,1)];
+
+%%%%%%%%%% OR 
+[xy]=[250,150;250,450;250,750];
+
+%%%%%%%%%%%%%%%%%%%%  TRIAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %img1=double(img1);
 
-img2=img1;
-
 %img_array=cell(img2,img1,img2,img1);
-img_array=[img2,img1,img2,img1];
+
+%img_array=[img2,img1,img2,img1];
+%%%%%%%%%%%%%%%%%%% END TRIAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N=4;
+img_cell=cell(1,N);
+img_cell{1}=img1;
+img_cell{2}=img2;
+img_cell{3}=img3;
+%img_cell{4}=img4;
+
 
 %%
 
 [h1, w1, x1] = size(img1);
 [h2, w2, x2] = size(img2);
+[h3, w3, x3] = size(img3);
+
+for jj=1:length(img_cell)-1
+
+[h(jj), w(jj), x(jj)]=size(img_cell{jj});
+end
+%[h4, w4, x4] = size(img4);
 
 %%
 
-vis=zeros(h1*4,w1*4,x1);
+vis=zeros(h1*2.5,w1*4.5,x1);
 
 %%
 %if (length(xy)==length(img_array))
 for ii=0:length(xy)-1
-%     vis(xy(i,1):h1+xy(i,1)-1, xy(i,2):w1+xy(i,2)-1,:) = img1(:,:,:);
 
-    vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
+   % vis(xy(i,1):h1+xy(i,1)-1, xy(i,2):w1+xy(i,2)-1,:) = img1(:,:,:);
 
+   % vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
+     
+   %vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
+    
 
+    vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1) = img_cell{ii+1};
+    
 end
 
 % else 
@@ -41,7 +92,7 @@ end
 
 %%
 
-vis(1:h2, w1:w1+w2-1,:) = img2;
+%vis(1:h2, w1:w1+w2-1,:) = img2;
 
 imshow(vis,[])
 
@@ -62,3 +113,5 @@ imshow(vis,[])
 % [A size]=fscanf(fileId,formatSpec,sizeA);
 % A=A'
 % fclose(fileId);
+
+
