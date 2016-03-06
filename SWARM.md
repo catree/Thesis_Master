@@ -4,7 +4,10 @@
 https://github.com/merosss/VRepRosQuadSwarm
 
 ______________________________________________________________________________________________________________________________
+With ROS in formation folder
 
+https://github.com/marknabil/Quad_Swarm
+______________________________________________________________________________________________________________________________
 https://github.com/marknabil/cvg_quadrotor_swarm
 
 vision-based quadrotor multi-robot systems ,  framework is fully operative, which works in simulationand on real robots
