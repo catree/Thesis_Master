@@ -25,6 +25,8 @@ https://github.com/marknabil/ardrone_thinc
 
 https://github.com/marknabil/hwu_osl_ardrone
 
+https://github.com/marknabil/DroneFleet
+
 A system for mapping large objects using an ARDrone quadcopter. A Princeton University 
 https://github.com/marknabil/QuadcopterMapping
 
@@ -33,6 +35,13 @@ https://github.com/marknabil/DroneFleet
 
 AR Drone 2.0 with ORB-SLAM
 https://github.com/marknabil/AutoNav
+
+Control of an ARDrone using position sensing from on-board cameras
+https://github.com/marknabil/flyvslam
+
+Robust Intelligent Sensing and Control Multi Agent Analysis Platform for Education and Research
+
+https://github.com/marknabil/risc_maap
 
 ## Keyboard Control
 ROS with keyboard control instead of the command lines : https://github.com/marknabil/ardrone_tutorials
