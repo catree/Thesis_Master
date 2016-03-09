@@ -1,6 +1,10 @@
 #
 
 ##Test
+waypoint in rviz ros
+https://github.com/marknabil/ros
+
+https://github.com/marknabil/ros-vrep
 
 ### easy with no much time 
 
