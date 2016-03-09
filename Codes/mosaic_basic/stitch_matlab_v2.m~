@@ -23,7 +23,8 @@ for i = 1 : length(srcFiles)
     Images{i}=I;
     Images_Gray=rgb2gray(Images{i});
     %figure, imshow(Images{i});
-    img_cell{i}=Images_Gray);
+    
+    img_cell{i}=I;
 
 end
 
@@ -51,9 +52,9 @@ end
  147.   ,        32.   ,         1.94859602;
  172.   ,        55.   ,         1.94859602;
   39.   ,        34.   ,         1.94859602;
-   68.   ,       120.   ,         1.94859602]
+   68.   ,       120.   ,         1.94859602];
 
-[xy]=[xyz(:,1:2)]
+[xy]=[xyz(:,1:2)];
 
 %%%%%%%%%%%%%%%%%%%%  TRIAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %img1=double(img1);
@@ -72,7 +73,7 @@ end
 % [h2, w2, x2] = size(img2);
 % [h3, w3, x3] = size(img3);
 
-for jj=1:length(img_cell)-1
+for jj=1:length(img_cell)
 
 [h(jj), w(jj), x(jj)]=size(img_cell{jj});
 end
@@ -80,7 +81,7 @@ end
 
 %%
 
-vis=zeros(h(1)*2.5,w(1)*4.5,x(1));
+vis=zeros(h(1)*1.5,w(1)*2.5,x(1));
 
 %%
 %if (length(xy)==length(img_array))
@@ -92,8 +93,8 @@ for ii=0:length(xy)-1
      
    %vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
     
-
-    vis(xy(ii+1,1):h(ii+1)+xy(ii+1,1)-1, xy(ii+1,2):w(ii+1)+xy(ii+1,2)-1) = img_cell{ii+1};
+    
+    vis(xy(ii+1,1):h(ii+1)+xy(ii+1,1)-1, xy(ii+1,2):w(ii+1)+xy(ii+1,2)-1,x()) = img_cell{ii+1};
     
 end
 

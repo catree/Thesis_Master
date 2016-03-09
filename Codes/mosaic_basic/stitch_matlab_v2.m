@@ -23,7 +23,8 @@ for i = 1 : length(srcFiles)
     Images{i}=I;
     Images_Gray=rgb2gray(Images{i});
     %figure, imshow(Images{i});
-    img_cell{i}=Images_Gray;
+    
+    img_cell{i}=I;
 
 end
 
@@ -51,7 +52,7 @@ end
  147.   ,        32.   ,         1.94859602;
  172.   ,        55.   ,         1.94859602;
   39.   ,        34.   ,         1.94859602;
-   68.   ,       120.   ,         1.94859602]
+   68.   ,       120.   ,         1.94859602];
 
 [xy]=[xyz(:,1:2)];
 
@@ -93,7 +94,7 @@ for ii=0:length(xy)-1
    %vis(xy(ii+1,1):h1+xy(ii+1,1)-1, xy(ii+1,2):w1+xy(ii+1,2)-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
     
     
-    vis(xy(ii+1,1):h(ii+1)+xy(ii+1,1)-1, xy(ii+1,2):w(ii+1)+xy(ii+1,2)-1) = img_cell{ii+1};
+    vis(xy(ii+1,1):h(ii+1)+xy(ii+1,1)-1, xy(ii+1,2):w(ii+1)+xy(ii+1,2)-1,:) = img_cell{ii+1};
     
 end
 
