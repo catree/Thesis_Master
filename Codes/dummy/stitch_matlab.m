@@ -2,32 +2,29 @@
 
 clear all , close all , clc;
 
-path = '~/Downloads/Download/Image Mosaicing';
+%path = '~/Downloads/Download/Image Mosaicing';
+
+path='/home/strub/scratch/Thesis_Master/Codes/dummy/';
+
 %im=fullfile(path,'lena_color.jpg');
 
-im='frame0000_1.jpg';
-img1 = imread(im);
+srcFiles = dir(strcat(path,'*.jpg'));  % the folder in which ur images exists
 
-im='frame0000_2.jpg';
-img2 = imread(im);
+for i = 1 : length(srcFiles)
+    %I=zeros(length(srcFiles),512,512);
+    %I(1:length(srcFiles))=zeros(512,512);
+    
+    filename = strcat(path,srcFiles(i).name);
+    I = imread(filename);
+    Images{i}=I;
+    Images_Gray=rgb2gray(I);
+    figure, imshow(Images{i});
+end
 
-% im='frame0000_3.jpg';
-% img3 = imread(im);
-
-im='frame0000_3_zoomed.jpg';
-img3 = imread(im);
-
-% im='frame0000_4.jpg';
-% img4 = imread(im);
-
-img1=rgb2gray(img1);
-img2=rgb2gray(img2);
-img3=rgb2gray(img3);
-
-%img4=rgb2gray(img4);
 
 % read : http://fr.mathworks.com/help/images/ref/imresize.html
-img3 = imresize(img3, 0.5);
+
+%img3 = imresize(img3, 0.5);
 
 %%
 
