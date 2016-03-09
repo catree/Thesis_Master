@@ -15,6 +15,8 @@ https://github.com/marknabil/ros-vrep
 
 https://github.com/marknabil/vrep_ros_stack
 
+##
+https://github.com/marknabil/vrep_ros_control_example
 
 ## quadrotor sim 
 https://github.com/marknabil/quadrotor-moveit-sim
