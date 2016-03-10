@@ -17,6 +17,7 @@ https://github.com/marknabil/cvg_quadrotor_swarm
 
 #Papers :
 Path Planning vs trajectory planning ; http://link.springer.com/chapter/10.1007/978-3-319-14705-5_1#page-1; 
+Quadrocopter Trajectory Generation and Control : http://flyingmachinearena.org/wp-content/publications/2011/hehn_dandrea_trajectory_generation_control.pdf
 
 # Keywords : 
 Path planning , motion planning , multi robot , swarm robots , multi agent ,cooperative search . 
