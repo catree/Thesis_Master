@@ -290,7 +290,7 @@
 		geometry_msgs::Point TargetPosition;
 		geometry_msgs::Point Delta;
 
-
+		/*
 		double targets[16][3]={50. ,          87.  ,          1.94859602,
 			11.        ,   63.         ,   1.94859602,
 			21.        ,   39.         ,   1.94859602,
@@ -307,14 +307,31 @@
 			172.        ,   55.         ,   1.94859602,
 			39.        ,   34.         ,   1.94859602,
 			68.        ,  120.         ,   1.94859602};
-			double small[16][2];
+			*/
+		int a=12;
+
+		double targets[12][3]={0, 46, 3.5 ,
+			 0, 16,    3.0,
+			 2, 7,     3.5 ,
+			 1, 76,    3.5,
+			 41, 50,   3.5,
+			 43, 16,   3.5,
+			 68, 61,   3.5,
+			 46, 92,   3.5,
+			 105, 90,  3.5,
+			 101, 56,  3.5,
+			 88, 25,   3.5,
+			 104, 1,   3.5 };
+
+			double small[a][2];
 
     // divide
-			for (int r=0;r<16;r++)
+			for (int r=0;r<a;r++)
 			{
 				for (int c=0;c<2;c++)
 				{
-					small[r][c]=targets[r][c]/100 ;
+					//small[r][c]=targets[r][c]/100 ;
+					small[r][c]=targets[r][c]/2 ;
 					small[r][2]=targets[r][2];
 
 					//small[r][2]=small[r][2];
@@ -327,7 +344,7 @@
 			{	
 				ros::spinOnce();
 				int r=0;
-				while(r<16)
+				while(r<a)
 				{
 
 
@@ -385,6 +402,8 @@
     //bvrep.GoalPose_publisher.publish(TargetPosition);
 
     ROS_INFO("MOTION TO GOAL");
+    //ROS_INFO(TargetPosition.x);
+
     /*
     Delta = bvrep.ComputeMotionToPosition();		
 
