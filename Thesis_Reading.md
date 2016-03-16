@@ -1,4 +1,7 @@
 
+## Thesis : 
+Optimal Path Planning for Unmanned Aerial Systems [[NTNU]]
+http://www.diva-portal.org/smash/get/diva2:565933/FULLTEXT01.pdf
 ##Extra 
 ###Nonlinear path-following control of an AUV
 http://www.sciencedirect.com/science/article/pii/S0029801807000406
