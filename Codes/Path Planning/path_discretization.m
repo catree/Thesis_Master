@@ -56,10 +56,12 @@ end
 path_finalized_3d_2=[path_finalized(:,1),path_finalized(:,2),c];
 
 %% Plot the path 
-
 % plot the 2D path 
 
 figure(1),plot2(path_finalized);
+
+%plot 3D Path
+
 figure(2),plot3(path_finalized_3d_2(:,1),path_finalized_3d_2(:,2),path_finalized_3d_2(:,3),'ro'),
 hold on,
 plot2(path_finalized,'b-');
