@@ -3,7 +3,7 @@ close all , clear all, clc;
 %% Path
 
 % this path is given by the 
-targets=[       0,  46,      3.5;
+targets=[		0,  46,      3.5;
     0,  16,      3.0;
     2,  7,       3.5;
     1,  76,      3.5;
@@ -51,17 +51,29 @@ end
 
 %% Finalize the Path
 
- path_finalized=[b,a];
+path_finalized=[b,a];
 % path_finalized_3d=[path_finalized(:,1),path_finalized(:,2),3.5*ones(size(path_finalized,1),1)];
 path_finalized_3d_2=[path_finalized(:,1),path_finalized(:,2),c];
 
+path_finalized_3d_3=[path_finalized(:,1)+75,path_finalized(:,2)+70,c];
+
 %% Plot the path 
+
 % plot the 2D path 
 
 figure(1),plot2(path_finalized);
-
-%plot 3D Path
-
 figure(2),plot3(path_finalized_3d_2(:,1),path_finalized_3d_2(:,2),path_finalized_3d_2(:,3),'ro'),
 hold on,
 plot2(path_finalized,'b-');
+
+%% Save Path to text file
+ fileID = fopen('path.txt','w');
+ 
+ for iii=1:size(path_finalized_3d_2,1)
+     
+ fprintf(fileID,'%f ,%f , %f , \n',path_finalized_3d_2(iii,1),path_finalized_3d_2(iii,2),path_finalized_3d_2(iii,3));
+ 
+ end
+%  fprintf(fileID,'%f , %f , %f , \n',path_finalized_3d_2(:,1),path_finalized_3d_2(:,2),path_finalized_3d_2(:,3))
+
+
