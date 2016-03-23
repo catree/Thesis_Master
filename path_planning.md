@@ -22,6 +22,10 @@ Quadrocopter Trajectory Generation and Control : http://flyingmachinearena.org/w
 UAV fit trajectory : 
 http://cdn.intechopen.com/pdfs/5982/InTech-Uav_trajectory_planning_for_static_and_dynamic_environments.pdf
 
+
+UAV Trajectory Planning for Static and Dynamic Environments : 
+http://cdn.intechopen.com/pdfs/5982/InTech-Uav_trajectory_planning_for_static_and_dynamic_environments.pdf
+
 # Thesis : 
 
 UNMANNED AERIAL VEHICLE TRAJECTORY PLANNING WITH DIRECT METHODS :
