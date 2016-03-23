@@ -19,6 +19,14 @@ https://github.com/marknabil/cvg_quadrotor_swarm
 Path Planning vs trajectory planning ; http://link.springer.com/chapter/10.1007/978-3-319-14705-5_1#page-1; 
 Quadrocopter Trajectory Generation and Control : http://flyingmachinearena.org/wp-content/publications/2011/hehn_dandrea_trajectory_generation_control.pdf
 
+UAV fit trajectory : 
+http://cdn.intechopen.com/pdfs/5982/InTech-Uav_trajectory_planning_for_static_and_dynamic_environments.pdf
+
+# Thesis : 
+
+UNMANNED AERIAL VEHICLE TRAJECTORY PLANNING WITH DIRECT METHODS :
+http://www.engr.psu.edu/rcoe/theses/Geiger_Brian.pdf
+
 # Keywords : 
 Path planning , motion planning , multi robot , swarm robots , multi agent ,cooperative search . 
 
