@@ -42,7 +42,6 @@
 #include <iterator>
 #include <list>
 
-
 //#include </opt/ros/indigo/lib/image_view/extract_images>
 
 #define LASER_SCANNER_MAX_RANGE 1.5
@@ -60,7 +59,7 @@
  public:
  	Bug2Vrep();
 
- 	ros::Publisher Control_pub;
+ 	ros::Publisher Control_pub;			
 
  	ros::Publisher Motor1_pub;
  	ros::Publisher Motor2_pub;
@@ -121,7 +120,9 @@
 		TargetPose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/vrep/waypoint_read",10,&Bug2Vrep::TargetPoseCallback,this);
 
 		
-		QuadTargetPosition_pub = nh_.advertise<geometry_msgs::Point>("/vrep/QuadrotorWaypointControl",1);
+		//QuadTargetPosition_pub = nh_.advertise<geometry_msgs::Point>("/vrep/QuadrotorWaypointControl",1);
+		
+		QuadTargetPosition_pub = nh_.advertise<geometry_msgs::PoseStamped>("/vrep/QuadrotorWaypointControl",1);
 		
 		//GoalPose_publisher = nh_.advertise<geometry_msgs::Point>("/vrep/GoalPose_sub_vrep",1);
 
@@ -290,7 +291,7 @@
 		Bug2Vrep bvrep;
 		
 
-		geometry_msgs::Point TargetPosition;
+		geometry_msgs::PoseStamped TargetPosition;
 		geometry_msgs::Point Delta;
 
 		/*
@@ -314,25 +315,10 @@
 		
 		//int aaa=33;
 		
-		/*
-		double targets[12][3]={0, 46, 3.5 ,
-			 0, 16,    3.0,
-			 2, 7,     3.5 ,
-			 1, 76,    3.5,
-			 41, 50,   3.5,
-			 43, 16,   3.5,
-			 68, 61,   3.5,
-			 46, 92,   3.5,
-			 105, 90,  3.5,
-			 101, 56,  3.5,
-			 88, 25,   3.5,
-			 104, 1,   3.5 };
-		double targets	 
-			double small[a][2];
-		*/
-			    usleep(500000);
+			usleep(500000);
 
 			double small[aaa][3];
+
 			double targets[aaa][3]=          {
 				0.57,5.67,1,
 				0.57,5.67,1.3,
@@ -476,36 +462,25 @@
 		}
 		*/
 
-
-		/*
-		std::vector<std::vector<int> my_array; // 2D Array 
-		my_array.size(); 
-		my_array[0].size();
-		*/
-
-/*
-	for (int r=0;r<15;r++)
-    {
-       int c=0;
-        	TargetPosition.x=small[r][c];
-        	TargetPosition.y=small[r][c+1];
-        	//--- END Navigation algorithm
-			
-    }    	
-  */
     int c=0;
 
-    TargetPosition.x=small[r][c];
-    TargetPosition.y=small[r][c+1];
-    // TargetPosition.z=small[r][c+2];
-    
+    TargetPosition.pose.position.x=small[r][c];
+    TargetPosition.pose.position.y=small[r][c+1];
+    TargetPosition.pose.position.z=small[r][c+2];
+
+/*
+    // Rotate 90 degree about Y axis ( YAW )
+
+    TargetPosition.pose.orientation.y=0.7071;
+	TargetPosition.pose.orientation.w=0.7071;
+*/
+
     int tolerance=0.2;
 
     //bvrep.GoalPose_publisher.publish(TargetPosition);
 
     ROS_INFO("MOTION TO GOAL");
-    //ROS_INFO(TargetPosition.x);
-
+   
     /*
     Delta = bvrep.ComputeMotionToPosition();		
 
@@ -513,9 +488,13 @@
     TargetPosition.y += Delta.y;
     */
 
-    TargetPosition.z=3.5;
+    
     //bvrep.GoalPose_publisher.publish(TargetPosition);
+
+
     bvrep.QuadTargetPosition_pub.publish(TargetPosition);		// Send the control signal
+
+
     usleep(500);
 
     bvrep.QuadTargetPosition_pub.publish(TargetPosition);		// Send the control signal
@@ -543,18 +522,9 @@
 
 	}
 
-	*/
-		/*
-		for (i=0;i<sizeof(targets);i++ )
-		{
-			TargetPosition=small[i]
-			//--- END Navigation algorithm
-			bvrep.QuadTargetPosition_pub.publish(TargetPosition);		// Send the control signal
-		}
-	*/		
-		
-		usleep(5000000);
-		r++;
+	*/	
+	usleep(5000000);
+	r++;
 	}
 }
 ros::shutdown();
