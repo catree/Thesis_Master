@@ -16,6 +16,14 @@ targets=[		0,  46,      3.5;
     88,  25,     3.5;
     104,  1,     3.5  ];
 %%
+image_size=[15 15];
+
+%%
+
+targets=[targets(:,1)+image_size(1,1), -(targets(:,2)+image_size(1,2)),targets(:,3)];
+
+
+%%
 a=[];
 b=[];
 c=[];
@@ -67,7 +75,7 @@ hold on,
 plot2(path_finalized,'b-');
 
 hold off
-figure(3),plot3(targets(:,1),path_finalized_3d_2(:,2),path_finalized_3d_2(:,3),'ro')
+figure(3),plot3(targets(:,1),targets(:,2),targets(:,3),'b-')
 
 %% Save Path to text file
  fileID = fopen('path.txt','w');

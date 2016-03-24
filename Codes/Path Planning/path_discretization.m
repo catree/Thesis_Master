@@ -16,6 +16,14 @@ targets=[		0,  46,      3.5;
     88,  25,     3.5;
     104,  1,     3.5  ];
 %%
+image_size=[15 15];
+
+%%
+
+targets=[targets(:,1)+image_size(1,1), -(targets(:,2)+image_size(1,2)),targets(:,3)];
+
+
+%%
 a=[];
 b=[];
 c=[];
