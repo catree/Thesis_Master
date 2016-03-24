@@ -67,7 +67,7 @@ hold on,
 plot2(path_finalized,'b-');
 
 hold off
-figure(3),plot3(targets(:,1),targets(:,2),targets(:,3),'b-')
+figure(3),plot3(targets(:,1),path_finalized_3d_2(:,2),path_finalized_3d_2(:,3),'ro')
 
 %% Save Path to text file
  fileID = fopen('path.txt','w');
