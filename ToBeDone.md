@@ -12,6 +12,10 @@ https://github.com/marknabil/Matlab-ImageStitching
 
 https://github.com/marknabil/panoramic-image-stitching
 
+### for me : 
+
+https://github.com/marknabil/vrep-stuff
+
 ### Pending 
 
 ####Enhanced stitching 
