@@ -19,9 +19,9 @@ targets=[		0,  46,      4.5,0;
 temp=targets;
 for i=1:size(targets,1)
     
-    output=pdist2(temp(i,:),temp);
+    output=pdist2(temp(1,:),temp);
     [minimum,index]=min(output(2:end));
-    output=[output;temp(index)];
+    output=[output;minimum];
     
     temp=temp(temp~=output);
 end
@@ -37,36 +37,12 @@ image_size=[1.5 1.5];
 % angle_of_camera=atand((image_size(1,1)/2)/height1);
 
 
-%% constant image_size
+%%
+image_size=image_size.*10;
+targets=[targets(:,1)+image_size(1,1), -(targets(:,2)+image_size(1,2)),targets(:,3),targets(:,4)];
 
-% cause for changing size there should be a condition about the rotation 
-image_size=image_size.*10; % for cm conversion of the camera .. 
-targets=[targets(:,1)+(image_size(1,1)/2), -(targets(:,2)+(image_size(1,2)/2)),targets(:,3),targets(:,4)];
-
-
-
-%% image_size with different orientation 
-
-% image_size=[20,15];
-% orientation=t(:,4);
-% t_out=[];
-% for i=1:size(t(:,4),1)    
-%     if(orientation(i)==0)
-%         t_out=[t_out;t(i,1)+(image_size(1)/2),t(i,2)+(image_size(2)/2),t(i,3),t(i,4)];
-%      
-%     else
-%         t_out=[t_out;t(i,1)+(image_size(2)/2),t(i,2)+(image_size(1)/2),t(i,3),t(i,4)];
-%     end
-% end
 
 %%
-%%%%%%%%%%%%%%%%
-% try interpolation by matlab instead : 
-% t = 0:0.001:1;
-% x = sin(2*pi*30*t) + sin(2*pi*60*t);
-% y = interp(x,4);
-%%%%%%%%%%%%%%%%
-
 a=[];
 b=[];
 c=[];
