@@ -23,6 +23,6 @@
 
 positions=[t(:,1),t(:,2),t(:,3)];
 [atour,areal,atourlength]=tsp(positions);
-figure(10),subplot(122),title("path planned"),plot3(areal(:,1),areal(:,2),areal(:,3));
-subplot(121),title("original"),plot3(positions(:,1),positions(:,2),positions(:,3));
+figure(10),subplot(122),title('path planned'),plot3(areal(:,1),areal(:,2),areal(:,3));
+subplot(121),title('original path without plan'),plot3(positions(:,1),positions(:,2),positions(:,3));
 
