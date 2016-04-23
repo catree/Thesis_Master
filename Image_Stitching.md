@@ -2,6 +2,8 @@
 
 https://en.wikipedia.org/wiki/Image_stitching
 
+https://github.com/GabriellaQiong/CIS581-Project3-Image-Mosaicing
+
 From NASA :
 
 https://github.com/marknabil/visionworkbench
