@@ -17,6 +17,7 @@ https://github.com/marknabil/panoramic-image-stitching
 https://github.com/marknabil/vrep-stuff
 
 ### Pending 
+https://github.com/GabriellaQiong/CIS581-Project3-Image-Mosaicing
 
 ####Enhanced stitching 
 ####write a ROS node for the image extraction
