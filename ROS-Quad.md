@@ -22,6 +22,12 @@ https://github.com/marknabil/vrep_ros_control_example
 https://github.com/marknabil/quadrotor-moveit-sim
 
 ## ARdrone 
+
+
+https://github.com/marknabil/ArDroneControl
+down camera with multi AR tags down. https://www.youtube.com/watch?v=c6fLsAwWbE0
+
+
 simulation and real : 
 https://github.com/marknabil/ardrone_thinc
 
