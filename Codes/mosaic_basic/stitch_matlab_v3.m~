@@ -8,7 +8,7 @@ clear all , close all , clc;
 
 path_code='/home/strub';
 
-path_images='/home/strub/Image_objects_ICPR_rotationEdited2/';
+path_images='/home/strub/Image_objects_ICPR_rotationEdited/';
 
 path=path_images;
 
@@ -97,12 +97,12 @@ end
 xyz=[xyzO(:,1),xyzO(:,2),xyzO(:,3)];
 %%
 
-[image_size]=size(imageee{3});
+[image_size]=size(imageee{1});
 image_area=[20 15];
 factor_of_height=1.5;
 image_area=image_area*factor_of_height;
 
-pose_multiple=[image_size(1),image_size(2)]./image_area; % [image_area(2),image_area(1)]
+pose_multiple=[image_size(2),image_size(1)]./image_area;
 
 % xyz=[xyz(:,1)+(image_size(1,1)/2), (xyz(:,2)+(image_size(1,2)/2)),xyz(:,3)];
 
@@ -110,11 +110,10 @@ pose_multiple=[image_size(1),image_size(2)]./image_area; % [image_area(2),image_
 
 [xy]=[xyz(:,1:2)];
 room_size=[150 140];
+[xy]=[room_size(1)-xy(:,1),room_size(2)-xy(:,2)];
 
-%[xy]=[room_size(1)-xy(:,1),room_size(2)-xy(:,2)];
-
-xy(:,1)=xy(:,1).*pose_multiple(1);
-xy(:,2)=xy(:,2).*pose_multiple(2);
+xy(1,:)=xy(1).*pose_multiple(1);
+xy(2)=xy(2).*pose_multiple(1);
 
 %[xy]=[xy].*pose_multiple(1);
 
@@ -143,12 +142,12 @@ end
 
 %%
 
-vis=zeros(h(1)*12,w(1)*12,x(1));
+vis=zeros(h(1)*10,w(1)*10,x(1));
 vis_1=vis(:,:,1);
 vis_3=vis_1;
 %%
 %if (length(xy)==length(img_array))
-for ii=0:length(xy)-1
+for ii=0:length(xy)-1-1
 
    % vis(xy(i,1):h1+xy(i,1)-1, xy(i,2):w1+xy(i,2)-1,:) = img1(:,:,:);
 
@@ -156,14 +155,10 @@ for ii=0:length(xy)-1
      
    %vis(x_now:h1+xy(ii+1,1)-1, y_now:w1+y_now-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
    
-   x_now=xy(ii+1,1);
-   y_now=xy(ii+1,2);
-   if (x_now==0)
-       x_now=0.1;
-   end
-   if (y_now==0)
-       y_now=0.1;
-   end
+   x_now=xy(ii+1,1)
+   y_now=xy(ii+1,2)
+   
+   
    vis_1(x_now:h(ii+1)+x_now-1,y_now:w(ii+1)+y_now-1,1)=rgb2gray(imageee{ii+1});
    
    vis2=(vis(:,:,1));
