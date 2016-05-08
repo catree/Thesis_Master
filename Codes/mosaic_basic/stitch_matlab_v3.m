@@ -156,8 +156,13 @@ for ii=0:length(xy)-1
      
    %vis(x_now:h1+xy(ii+1,1)-1, y_now:w1+y_now-1,:) = img_array(:,ii*h1+1:((ii*h1)+h1),:);
    
+   
    x_now=xy(ii+1,1);
    y_now=xy(ii+1,2);
+   
+   %get out OF the trap of having an index of zero that will make a problem
+   %afterwards
+   
    if (x_now==0)
        x_now=0.1;
    end
@@ -173,10 +178,6 @@ for ii=0:length(xy)-1
    image_output=vis_3(x_now:h(ii+1)+x_now-1, y_now:w(ii+1)+y_now-1,1);
    
    image_output=image_output+double(rgb2gray(imageee{ii+1}));
-   
-%    figure(44),subplot(121),imshow(vis_1,[]),subplot(122),
-%    imshow(vis_1(x_now:h(ii+1)+x_now-1, y_now:w(ii+1)+y_now-1,1),[]);
-%    
    
    vis_5R(x_now:h(ii+1)+x_now-1,y_now:w(ii+1)+y_now-1)=imageee{ii+1}(:,:,1);
    vis_5G(x_now:h(ii+1)+x_now-1,y_now:w(ii+1)+y_now-1)=imageee{ii+1}(:,:,2);
@@ -199,16 +200,12 @@ end
 %     print('the number of points and the images are not the same');
 % end
 
-%vis(xy(1,1):h1+xy(1,1)-1, xy(1,2):w1+xy(1,2)-1,:) = img1(:,:,:);
-
-
 %%
    vis_5(:,:,1)=vis_5R;
    vis_5(:,:,2)=vis_5G;
    vis_5(:,:,3)=vis_5B;
  
 %%
-
 
 %vis(1:h2, w1:w1+w2-1,:) = img2;
 
