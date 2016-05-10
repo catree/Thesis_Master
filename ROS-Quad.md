@@ -27,6 +27,7 @@ https://github.com/marknabil/quadrotor-moveit-sim
 https://github.com/marknabil/ArDroneControl
 down camera with multi AR tags down. https://www.youtube.com/watch?v=c6fLsAwWbE0
 
+forward and backward example based on ardrone autonomy : https://github.com/marknabil/arl_ardrone
 
 simulation and real : 
 https://github.com/marknabil/ardrone_thinc
