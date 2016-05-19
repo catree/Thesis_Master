@@ -1,4 +1,6 @@
 #
+## very cooool to be added : 
+https://github.com/gareth-cross/rviz_satellite
 
 ##Test
 waypoint in rviz ros
