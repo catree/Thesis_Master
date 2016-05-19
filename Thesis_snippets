@@ -1,0 +1,15 @@
+the positive
+scaling factors present in the potential functions are properly
+chosen to avoid local minimum. 
+
+
+% paper named : Multipoint potential field method for path planning
+of autonomous underwater vehicles in 3D space
+
+
+without requiring complete information about the environment . Just the area needed to be covered and the areas inside it that don't have importance to be covered . 
+
+
+
+the dynamics of the vehicle is not considered in this work. Instead the
+shape, size and kinematics of the vehicle are considered
