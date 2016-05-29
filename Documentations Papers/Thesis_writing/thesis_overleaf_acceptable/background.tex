@@ -1,0 +1,117 @@
+\chapter{Background} \label{chap:background}
+
+% Boustrophedon cell decomposition based coverage method 
+% not Boustrophedon area coverage from right to left and from left to right in alternate lines.
+% veer the uav from the desired path
+
+The merit of this thesis in the coverage path planning context is splitting and decoupling the process of the coverage problem. The process will consist of: finding the proper pose and orientation of camera views that maintain area coverage, then apply path planning techniques to traverse these poses. So that the first part can be used as a solution by itself with positioning cameras in the obtained positions. The second merit is minimizing the overlapping paths and implementing the path planning taking into account the footprint of the robot and the camera, not relying on the assumption of robot representation as a point. % here the footprint of the camera only not the robot too 
+
+\section{Related Work in path planning}
+\subsection{Coverage Path Planning}
+There are two main surveys that this literature review is relying on in picking and comparing the path planning technique to be further implemented and tested on the quadcopter. These surveys are; a survey on coverage path planning for robotics \cite{CPP2}, and coverage for robotics survey of recent results\cite{CPP1}.
+
+There are a lot of other work extensively explored from many research areas beside path planning like computer vision, and graph theory. The problem can be studied from many sides like mapping, searching, patrolling, and applications. We focus here about the path planning and area coverage problems with slightly different approach than the common one. we take into consideration the footprint of the camera and one of the goals is to reduce the number of waypoints with maximum area coverage. Full area coverage in terms of 100\% is not the constraint.
+
+In the literature generally there is always a navigation pattern to pass through the whole space; the robot need to cover. This pattern is done after decomposing the map into either regular cells or irregular ones like Voronoi. These methods can be categorized as heuristic and approximate, partial-approximate and exact cellular decompositions as discussed in \cite{CPP1}.
+
+Coverage algorithms can be classified as heuristic or complete depending on whether or not they provably guarantee complete coverage of the free space. At the same time, they can be classified as online or offline. Offline algorithms rely only on the stationary information, and the environment is assumed to be known. Usually online algorithms are needed if some kind of adaptivity to the environment is required. Online algorithms usually utilize real-time sensor measurements. Thus, these algorithms can also be called sensor-based coverage algorithms.
+
+The heuristic approach that is based on random path which is like the one equipped in some lawn mower and vacuum cleaner robots as mentioned in \cite{CPP1} can not be considered for aerial robots applications. 
+Coverage algorithms can rely on cellular decomposition with many techniques that an extensive comparison was given in \cite{CPP2}; then an ox plowing motions is used like the example in planning algorithm book \cite{planningBook}. As the approach used in this thesis will not rely on map decomposition, further investigation can be found in the cited papers and book. \textcolor{red}{ If not decomposition how to say grid decomposition } 
+
+
+\textcolor{red}{These algorithm can result in redundant coverage.}
+
+Other approaches like  Artificial Potential Fields (APF), graph algorithms and neural networks can be used instead of the map decomposition. \textcolor{red}{||||||}
+
+
+
+
+\subsection{Coverage Path Planning for UAVs}
+There are various ways to obtain the path planning and optimize them.
+CPP problem is a sub-field of path planning and well studied for ground vehicles like cases in \cite{CPP1,CPP2,path_planning_UGV}.
+
+\textbf{CPP for UAV in general} 
+
+In operations research, the CPP problem represent the environment as a graph, and using algorithms such as the traveling salesman(TSP) or postman problems to generate optimal solutions. In the graph representation, locations in the environment is represented as nodes in the graph and the paths between the locations are the edges. Each edge has a cost assigned to it where the cost can represent measurements such as distance(Euclidean,Mahalanobis,etc) between locations, terrain traversability, travel time or a combination of several metrics. These edges can be constrained or unconstrained with directions. More precisely undirected , directed graphs.
+
+Voronoi diagram is also another possible solution as developed in \cite{voronoi_UAV} for decomposing the desired area and find the feasible solution from the starting point to the goal point through two step path planning algorithm, but it doesn't take into consideration the repetition rate constraint or full area coverage. For these reasons considering the solution used for arc routing problem is most beneficial.
+
+TSP considered one problem of a large class of problems known as combinatorial problems and introduced in UAV path planning for several purposes like refueling depots in \cite{TSP_UAV}, multiple UAV cooperative reconnaissance in \cite{TSP_UAV_Multi}. This is a non-deterministic polynomial-time hard (NP hard) problem, that is sub-optimally solvable by many approaches as found in various research fields \cite{TSP_NPHARD}. Evolutionary approaches specifically  will be considered in this thesis.  
+
+\subsubsection*{Evolutionary algorithms}
+
+% \textbf{In this thesis considering one UAV operation to solve the CPP problem using GA as global path planning followed by local path planning solution.} 
+
+Evolutionary Algorithms(EA) as sub branch of meta-heuristic optimization algorithms, imitates the biological process of evolution in nature. There are various algorithms that are branched from it like Ant colony optimization (ACO), particle swarm optimization (PSO),Genetic Algorithm GA and many more which can be studied from \cite{Evo_Book1,Evo_Book2}. GA uses techniques of inheritances, mutations, selections and crossovers of chromosomes over several generations of possible solutions to find convergence to the most optimized solution. Explanation in the next chart is the general abstract view of GA, more details will be explained in the methodology chapters.
+
+\tikzset{
+  frame/.style={
+    rectangle, draw, 
+    text width=6em, text centered,
+    minimum height=4em,drop shadow,fill=lime!40,
+    rounded corners,
+  },
+  line/.style={
+    draw, -latex',rounded corners=3mm,
+  }
+}
+
+\begin{tikzpicture}[font=\small\sffamily\bfseries,very thick,node distance = 4cm]
+\node [frame] (pop) {Population};
+\node [above=2cm, left of=pop] (init) {Initialisation};
+\node [below=2cm, left of=pop] (term) {Termination};
+\node [frame, above=2cm, right of=pop] (parents)  {Parents};
+\node [frame, below=2cm, right of=pop] (off)  {Offspring};
+
+\path [line] (parents)
+ -- node[right,align=left,pos=.5] {Cross-Over\\[3mm]Mutation}
+ (off);
+\path [line] (init) |- (pop.170);
+\path [line] (pop.190) -| (term);
+%tournament 
+\path [line] (off) -| node[below,pos=.25, align=center] {Survivor\\ selection}(pop);
+\path [line] (pop) |- node[above,pos=.75, align=center] {Parents\\ selection}(parents);
+\end{tikzpicture}
+
+\subsection{Hybrid Algorithms for path planning}
+
+\textbf{A two-level approach to collision-free navigation, using
+artificial potential fields on the local lower solution planning, and GA solution to waypoints optimization problem represented as TSP for global higher layer planning}. 
+
+then point-to-point motion planning problem, where the vehicle task is to navigate from a pre-specified initial point in the workspace to a pre-specified destination goal point.
+
+\section{Waypoints Selection}
+
+Finding the waypoints to have the best coverage of the area is close to the problem of positioning cameras or sensors to cover an area efficiently. Sensor positioning problem has been investigated since a few decades, mainly for video surveillance \cite{c1}. Without any additional constraint, this problem is NP-Hard as stated in \cite{c1,c2,c3,c4,c5} for the Watchman Route Problem (which is very similar to the optimal positioning waypoint for UAV path). Two non-optimal solutions have been proposed. The first one is based on Art Gallery Problem (AGP) \cite{c2,c3} and the second one is based on the Wireless Sensors Networks \cite{c6,c7,c8,c9} trying to find the best position to design an efficient network which can collect data with any kind of sensors. 
+
+% do you mean here the the sensor pose is the most adequate solution
+
+However, the solution proposed to the problem addressed the coverage problem but linked with additional and specific constraints, which are out of our scope. 
+% like basic room without obstacles or focus on selection among the different possible sensor poses, which is the most adequate solutions. 
+% This will become finding a solution among a set of more efficient subset of solutions, not a problem of finding a solution
+%This will not become a problem of finding a position but to select among the set of more efficient subset of solutions. %or select the position sensor in the set of possible and restrained position
+ %\cite{c7}.
+ 
+ One of the algorithm used is the Particle Swarm Optimization (PSO) as detailed in \cite{c10,c11}. Zhou \textit{et al.} \cite{c10}, some experimental results are provided and one solution running in real time is proposed. However, the scene used in these experiments is rather small and many cameras are employed to fully cover it.  On the other hand, \cite{c11} uses a cost function but the cost function is not only focused on the position for surveillance and coverage, but also handling resolution and lighting, which affect the final solution by not covering the under illuminated areas.Reddy \textit{et al}. \cite{c11} also introduced the concept of “acceptable response”, allowing non-optimal/sub-optimal solutions. If the coverage score is higher than a given threshold, the solution is accepted and not locked by the research of an optimal solution. 
+% Inspired by \cite{c10,c11}, extending the method for UAV waypoints positioning and path planning in more complex environments (basic room, big room, non-square shape).
+ 
+ \section{UAV Localization} \label{localization_Back}
+ 
+UAV localization problem is the challenge of finding the pose in terms of position and orientation of the aerial robot with reference frame. This reference frame can be with the initial point the robot is launched from, or a point in the map. There are two main categories for localizing the robot; either indoor or outdoor. For outdoor, GPS based navigation system is often used to determine the UAV’s absolute position. Also equipped with inertial measurement unit (IMU), UAV's orientation and acceleration can be estimated. State estimation of the UAV is obtained by coupling the previous obtained data with the UAV's mathematical model. This information is essential for autonomous navigation and of significant importance to aid the pilot to achieve smoother navigation. \textbf{Unlike ground vehicles, just holding the robot's pose requires values to withstand its place , giving order continuously to the robot   This is particularly the case for an aerial vehicle - while for ground-based vehicles not moving typically is a trivial task, this is not the case for a flying robot. Holding a position in the air requires constantly counteracting minor randomly induced movements, which in turn requires a method to detect these movements.}.
+While for indoor localization challenge employing the IMU data can provide relative location, over time small errors will keep accumulating and drift will happen and affect the localization. Additional information about global positioning should be available to recover for this drift using means of filtering and sensor fusion \textbf{CITE} 
+
+ This method will not be feasible when flying indoors where there is no reliable or cheaply available GPS modules available - alternative localization methods are required. For these reasons a solution  relying only on the UAV's sensors, using external tracking devices or external fiducial markers tracked by onboard camera. \textbf{CITE} 
+ 
+
+An example of the available external tracking device are motion capture cameras that allow the robot to measure its position with very high precision and accuracy as in \cite{michael2010grasp}. Reflective markers like retroreflective dots attached to the robot, the cameras can estimate the position of each reflective marker and these cameras can do it at split second timing exceeding speeds of 100-200 times a second. This system will not be used as it requires setup up of several cameras which cost dozens of thousands of euros. The other external solution provided for example in  \cite{meier2012pixhawk} using external markers and detected using onboard camera. This solution could have been considered, but it is not the chosen one to be implemented in this thesis. 
+ 
+ 
+ There are wide range of sensors can be equipped on the UAV to be help its localization like laser range scanner, monocular camera, stereo camera, RGB-D sensor, or ultrasonic range sensors. The usage of monocular camera is chosen to be the solution for this thesis. They provide competitive advantages; as they are cheap, energy-efficient, small and light. \textbf{CITE} Simultaneous localization and mapping (SLAM) can be achieved by combining visual pose estimates from the monocular camera  with additional sensor measurements available like the implementation of Tardif et al. in \cite{tardif2008monocular}. The tool developed by the computer vision group in Technical University of Munich as mentioned in the papers \cite{engel14ras,engel12iros}, is utilized on an AR.Drone 2.0 available in the lab with minor modification and plugin suitable to the specific coverage problem.
+ 
+\section{Mosaicking}
+without considering the features of the images, but relying on the given position and orientation. 
+ 
+%  feature based : http://cseweb.ucsd.edu/classes/fa02/cse252c/smallick.pdf
+
+%  comparison : http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.677.1527&rep=rep1&type=pdf
