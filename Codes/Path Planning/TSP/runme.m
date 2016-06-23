@@ -2,7 +2,7 @@
 
 close all , clear all , clc;
 %% Path 
-path=[86, 40, 1.75, 1
+path_unsorted=[86, 40, 1.75, 1
     ; 275, 137, 1.75, 1
     ; 128, 274, 1.75, 1
     ; 104, 2, 1.75, 0
@@ -80,27 +80,36 @@ path=[86, 40, 1.75, 1
     ];
 
 %% change the point to center
-area_size=[20,15];
-factor_height=t(:,3);
+area_size=[20,15]; % camera ratio given by David.
+
+factor_height=path_unsorted(:,3); % depends on the height to be multiplied by the previous area
 
 area_covered_list=[];
-for tot=1:size(t,1)
+for tot=1:size(path_unsorted,1)
     area_covered=area_size.*factor_height(tot);
     area_covered_list=[area_covered_list;area_covered];
     
-    if(t(tot,4)==0)
-        t_center(tot,:)=[(t(tot,1)+(area_covered(1)/2)) , (t(tot,2)+(area_covered(2)/2))];
+    if(path_unsorted(tot,4)==0)
+        path_unsorted_centered(tot,:)=[(path_unsorted(tot,1)+(area_covered(1)/2)) , (path_unsorted(tot,2)+(area_covered(2)/2))];
         
     else
-        t_center(tot,:)=[(t(tot,1)+(area_covered(2)/2)) , (t(tot,2)+(area_covered(1)/2))];
+        path_unsorted_centered(tot,:)=[(path_unsorted(tot,1)+(area_covered(2)/2)) , (path_unsorted(tot,2)+(area_covered(1)/2))];
     end
 end
-t_center(:,3)=t(:,3);
-%%
+path_unsorted_centered(:,3)=path_unsorted(:,3);
 
-positions=[t_center(:,1),t_center(:,2),t_center(:,3)];
-[atour,areal,atourlength]=tsp(positions);
-figure(10),subplot(122),title('path planned'),plot3(areal(:,1),areal(:,2),areal(:,3)),
-hold on ,plot3(areal(:,1),areal(:,2),areal(:,3),'ro');
-subplot(121),title('original path without plan'),plot3(positions(:,1),positions(:,2),positions(:,3));
+%%
+% take the 3D position in consideration
+
+positions=[path_unsorted_centered(:,1),path_unsorted_centered(:,2),path_unsorted_centered(:,3)];
+
+% run the main TSP sover method. 
+
+[atour,path_sorted,atourlength]=tsp(positions);
+
+%% plot the result of the path 
+
+figure(10),subplot(122),title('path after planned'),plot3(path_sorted(:,1),path_sorted(:,2),path_sorted(:,3)),
+hold on ,plot3(path_sorted(:,1),path_sorted(:,2),path_sorted(:,3),'ro');
+subplot(121),title('original path without planning'),plot3(positions(:,1),positions(:,2),positions(:,3));
 
