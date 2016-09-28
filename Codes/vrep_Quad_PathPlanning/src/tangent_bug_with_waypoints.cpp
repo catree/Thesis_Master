@@ -1,17 +1,16 @@
 /*
 * =====================================================================================
 *
- *       Filename:  tangent_bug_with_waypoints.cpp
- *
- *    Description:  BUG2 algorithm implementation for ROS and VREP
+ *      
+ *    Description:  motion planning algorithm implementation for ROS and VREP
  *
  *        Version:  1.0
- *        Created:  19/11/2013 15:59:17
+ *        Created:  19/04/2016 15:59:17
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Roberto Marino (rm), formica@member.fsf.org
- *   Organization:  University of Genoa
+ *         Author:  Mark Bastourous , mark.nabil.guc@hotmail.com
+ *   Organization:  LE2I
  *
  * =====================================================================================
  */
