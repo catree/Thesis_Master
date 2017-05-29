@@ -1,0 +1,53 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Micro aerial vehicle}}{2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Localization techniques}}{8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {AR tags}}}{8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Motion tracking cameras}}}{8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Projection of the camera on the ground.}}{11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces GA explanation, from one generation to the other.}}{12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Scenarios used for the experiments: (a), (b), (c) are with z=1 and (d), (e) with z=2. The gray rectangle represents the field of view of one camera projected onto the ground.}}{13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{13}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{13}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{13}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{13}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Comparison of eight solution given by GA, eight solution given by PSO algorithms with a Z equal to 1, in the big room 240x160 and ground truth equal to 64.}}{15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison of eight solutions given by GA, eight solutions given by PSO algorithms with a Z between [1/2; 2], in the room with L shape 120x80 and ground truth equal to 15.}}{15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Path using Dijkstra vs GA}}{19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pipeline of the methodology}}{22}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Room Coverage}}{24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Small Room}}}{24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Big room}}}{24}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Drone available in V-REP with some modifications}}{25}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Camera projection on the ground}}{26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1m height, wide angle}}}{26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2m height, wide angle}}}{26}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {2m height, small angle}}}{26}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces GA path planning followed by linear piecewise of 18 waypoints to cover 79\% of an area}}{26}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Smoothing GA path planning of 18 waypoints to cover 79\% of an area}}{27}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces GA path planning followed by linear piecewise of 22 waypoints to cover 90.68\% of an area}}{27}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Smoothing GA path planning of 22 waypoints to cover 90.68\% of an area}}{28}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Aerial Arena }}{29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Aerial image as seen on map}}}{29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {unwanted areas to be covered are contoured with rectangles}}}{29}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Imitated area coverage by aerial robot }}{29}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Potential field map}}{30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Attractive potential field map}}}{30}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Repulsive potential field map}}}{30}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Summary potential field map}}}{30}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Path from one point to the consecutive}}}{30}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Ar.Drone 2.0}}{31}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Workspace for the experiment}}{32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drone and flag to be covered}}}{32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Top view of the flying arena}}}{32}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Path Planning visualization on PTAM}}{33}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Poses of every image captured in the room}}{34}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Room Coverage}}{34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Room mosaicing}}}{34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Top view of the Room}}}{34}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Flags Mosiacing}}{35}
+\addvspace {10\p@ }

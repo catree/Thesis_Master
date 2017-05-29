@@ -1,0 +1,283 @@
+\begin{thebibliography}{10}
+
+\bibitem{TSP_NPHARD}
+Sanjeev Arora.
+\newblock Polynomial time approximation schemes for euclidean traveling
+  salesman and other geometric problems.
+\newblock {\em Journal of the ACM (JACM)}, 45(5):753--782, 1998.
+
+\bibitem{augusto2013robotteamsim}
+Gon{\c{c}}alo Nuno dos~Santos Augusto.
+\newblock Robotteamsim--3d visualization of cooperative mobile robot missions
+  in gazebo virtual environment.
+\newblock 2013.
+
+\bibitem{c6}
+Song B., Soto C., Roy-Chowdhury~A. K., and Farrell J.
+\newblock Decentralized camera network control using game theory.
+\newblock {\em In Distributed Smart Cameras, 2008. ICDSC 2008. Second ACM/IEEE
+  International Conference on (pp. 1-8)}, 2008.
+
+\bibitem{benini2013imu}
+Alessandro Benini, Adriano Mancini, and Sauro Longhi.
+\newblock An imu/uwb/vision-based extended kalman filter for mini-uav
+  localization in indoor environment using 802.15. 4a wireless sensor network.
+\newblock {\em Journal of Intelligent \& Robotic Systems}, 70(1-4):461--476,
+  2013.
+
+\bibitem{Ardrone1}
+Cooper Bills, Joyce Chen, and Ashutosh Saxena.
+\newblock Autonomous mav flight in indoor environments using single image
+  perspective cues.
+\newblock In {\em Robotics and automation (ICRA), 2011 IEEE international
+  conference on}, pages 5776--5783. IEEE, 2011.
+
+\bibitem{voronoi_UAV}
+Scott~A. Bortoff.
+\newblock Path planning for uavs.
+\newblock {\em American Control Conference Proceedings of the 2000. Vol. 1. No.
+  6. IEEE}, 2000.
+
+\bibitem{capel2004image}
+David Capel.
+\newblock {\em Image mosaicing and super-resolution}.
+\newblock Springer Science \& Business Media, 2004.
+
+\bibitem{CPP1}
+Howie Choset.
+\newblock Coverage for robotics–a survey of recent results. annals of
+  mathematics and artificial intelligence 31.1-4.
+\newblock pages 113--126, (2001).
+
+\bibitem{dantzig1954solution}
+George Dantzig, Ray Fulkerson, and Selmer Johnson.
+\newblock Solution of a large-scale traveling-salesman problem.
+\newblock {\em Journal of the operations research society of America},
+  2(4):393--410, 1954.
+
+\bibitem{davies2006multiple}
+Trevor Davies and Amor Jnifene.
+\newblock Multiple waypoint path planning for a mobile robot using genetic
+  algorithms.
+\newblock In {\em Computational Intelligence for Measurement Systems and
+  Applications, Proceedings of 2006 IEEE International Conference on}, pages
+  21--26. IEEE, 2006.
+
+\bibitem{Evo_Book2}
+Kalyanmoy. Deb.
+\newblock {\em Multi-objective optimization using evolutionary algorithms. Vol.
+  16.}
+\newblock John Wiley \& Sons, 2001.
+
+\bibitem{c4}
+Packer E.
+\newblock Computing multiple watchman routes.
+\newblock {\em In Experimental Algorithms (pp. 114-128). Springer Berlin
+  Heidelberg}, 2008.
+
+\bibitem{engel12iros}
+J.~Engel, J.~Sturm, and D.~Cremers.
+\newblock Camera-based navigation of a low-cost quadrocopter.
+\newblock In {\em Proc. of the International Conference on Intelligent Robot
+  Systems (IROS)}, Oct. 2012.
+
+\bibitem{engel14ras}
+J.~Engel, J.~Sturm, and D.~Cremers.
+\newblock Scale-aware navigation of a low-cost quadrocopter with a monocular
+  camera.
+\newblock {\em Robotics and Autonomous Systems (RAS)}, 62(11):1646--–1656,
+  2014.
+
+\bibitem{rohmer2013v}
+Rohmer Eric, Singh~Surya PN, and Freese Marc.
+\newblock V-rep: A versatile and scalable robot simulation framework.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ
+  International Conference on}, pages 1321--1326. IEEE, 2013.
+
+\bibitem{fei2013comprehensive}
+WANG Fei, CUI Jin-Qiang, CHEN Ben-Mei, and H~LEE Tong.
+\newblock A comprehensive uav indoor navigation system based on vision optical
+  flow and laser fastslam.
+\newblock {\em Acta Automatica Sinica}, 39(11):1889--1899, 2013.
+
+\bibitem{CPP2}
+Marc~Carreras Galceran~Enric.
+\newblock A survey on coverage path planning for robotics. robotics and
+  autonomous systems 61.12.
+\newblock pages 1258--1276, 2013.
+
+\bibitem{c8}
+Ma~H., Yang M., Li~D., Hong Y., and Chen W.
+\newblock Minimum camera barrier coverage in wireless camera sensor networks.
+\newblock {\em In INFOCOM, 2012 Proceedings IEEE}, pages 217--225, 2012.
+
+\bibitem{c5}
+Zhao J., Cheung~S. C., and Nguyen T.
+\newblock Optimal camera network configurations for visual tagging.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of, 2(4)},
+  pages 464--479, 2008.
+
+\bibitem{joseph2015mastering}
+Lentin Joseph.
+\newblock {\em Mastering ROS for robotics programming}.
+\newblock Packt Publishing Ltd, 2015.
+
+\bibitem{judd2001spline}
+Kevin~B Judd and Timothy~W McLain.
+\newblock Spline based path planning for unmanned air vehicles.
+\newblock In {\em AIAA Guidance, Navigation, and Control Conference and
+  Exhibit}, pages 1--9. Montreal, Canada, 2001.
+
+\bibitem{c11}
+Reddy~K. K. and Conci N.
+\newblock Camera positioning for global and local coverage optimization.
+\newblock {\em In Distributed Smart Cameras (ICDSC), 2012 Sixth International
+  Conference}, 2012.
+
+\bibitem{khatib1986real}
+Oussama Khatib.
+\newblock Real-time obstacle avoidance for manipulators and mobile robots.
+\newblock {\em The international journal of robotics research}, 5(1):90--98,
+  1986.
+
+\bibitem{Ardrone2}
+Tom{\'a}{\v{s}} Krajn{\'\i}k, Vojt{\v{e}}ch Von{\'a}sek, Daniel Fi{\v{s}}er,
+  and Jan Faigl.
+\newblock Ar-drone as a platform for robotic research and education.
+\newblock In {\em Research and Education in Robotics-EUROBOT 2011}, pages
+  172--186. Springer, 2011.
+
+\bibitem{c7}
+Liu L., X.~Zhang, and Ma~H.
+\newblock Optimal node selection for target localization in wireless camera
+  sensor networks.
+\newblock {\em Vehicular Technology, IEEE Transactions on, 59(7)}, pages
+  3562--3576, 2010.
+
+\bibitem{latombe2012robot}
+Jean-Claude Latombe.
+\newblock {\em Robot motion planning}, volume 124.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{planningBook}
+Steven~M. LaValle.
+\newblock {\em Planning algorithms.}
+\newblock Cambridge university press, 2006.
+
+\bibitem{meier2012pixhawk}
+Meier Lorenz, Tanskanen Petri, Heng Lionel, Lee~Gim Hee, Fraundorfer Friedrich,
+  and Pollefeys Marc.
+\newblock Pixhawk: A micro aerial vehicle design for autonomous flight using
+  onboard computer vision.
+\newblock {\em Autonomous Robots}, 33(1-2):21--39, 2012.
+
+\bibitem{c3}
+Erdem~U. M. and Sclaroff S.
+\newblock Automated camera layout to satisfy task-specific and floor
+  plan-specific coverage requirements.
+\newblock {\em J Computer Vision and Image Understanding}, pages 156--169,
+  2006.
+
+\bibitem{c2}
+Moeini M., Kröller A., and Schmidt C.
+\newblock Une nouvelle approche pour la resolution du probleme de la galerie
+  d’art.
+\newblock 1998.
+
+\bibitem{mosaic_image_intro}
+{Mark Bastourous}.
+\newblock {video of the practical experiment}.
+\newblock
+  \url{https://onedrive.live.com/redir?resid=7D510DC6427EBCFD!2442&authkey=!ADaFBcw-AiQErOI&ithint=folder%2cwmv
+  }, 2016.
+\newblock Online; accessed 29-May-2016.
+
+\bibitem{michael2010grasp}
+Michael Nathan, Mellinger Daniel, Lindsey Quentin, and Kumar Vijay.
+\newblock The grasp multiple micro-uav testbed.
+\newblock {\em Robotics \& Automation Magazine, IEEE}, 17(3):56--65, 2010.
+
+\bibitem{o2014gentle}
+Jason~M O'Kane.
+\newblock A gentle introduction to ros, 2014.
+
+\bibitem{c10}
+Zhou P. and C.~Long.
+\newblock Optimal coverage of camera networks using pso algorithm.
+\newblock {\em In Image and Signal Processing (CISP), 2011 4th International
+  Congress on}, 4:2084--2088, 2011.
+
+\bibitem{c9}
+Wang Q., J.~Wu, and C.~Long.
+\newblock On-line configuration of large scale surveillance networks using
+  mobile smart camera.
+\newblock {\em In Distributed Smart Cameras (ICDSC), 2013 Seventh International
+  Conference on}, pages 771--779, 2013.
+
+\bibitem{quigley2009ros}
+Morgan Quigley, Ken Conley, Brian Gerkey, Josh Faust, Tully Foote, Jeremy
+  Leibs, Rob Wheeler, and Andrew~Y Ng.
+\newblock Ros: an open-source robot operating system.
+\newblock In {\em ICRA workshop on open source software}, volume~3, page~5,
+  2009.
+
+\bibitem{yahyanejad2010incremental}
+Yahyanejad Saeed, Wischounig-Strucl Daniel, Quaritsch Markus, and Rin Bernhard.
+\newblock Incremental mosaicking of images from autonomous, small-scale uavs.
+\newblock In {\em Advanced Video and Signal Based Surveillance (AVSS), 2010
+  Seventh IEEE International Conference on}, pages 329--336. IEEE, 2010.
+
+\bibitem{scholer2012generating}
+Flemming Sch{\o}ler, La~Cour-Harbo, Morten Bisgaard, et~al.
+\newblock Generating approximative minimum length paths in 3d for uavs.
+\newblock In {\em Intelligent Vehicles Symposium (IV), 2012 IEEE}, pages
+  229--233. IEEE, 2012.
+
+\bibitem{Evo_Book1}
+Dan Simon.
+\newblock {\em Evolutionary optimization algorithms}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem{TSP_UAV}
+Kaarthik Sundar and Sivakumar Rathinam.
+\newblock Algorithms for routing an unmanned aerial vehicle in the presence of
+  refueling depots.
+\newblock {\em Automation Science and Engineering, IEEE Transactions on},
+  11(1):287--294, 2014.
+
+\bibitem{tardif2008monocular}
+Jean-Philippe Tardif, Yanis Pavlidis, and Kostas Daniilidis.
+\newblock Monocular visual odometry in urban environments using an
+  omnidirectional camera.
+\newblock In {\em Intelligent Robots and Systems, 2008. IROS 2008. IEEE/RSJ
+  International Conference on}, pages 2531--2538. IEEE, 2008.
+
+\bibitem{TSP_UAV_Multi}
+Jing Tian, Lincheng Shen, and Yanxing Zheng.
+\newblock Genetic algorithm based approach for multi-uav cooperative
+  reconnaissance mission planning problem.
+\newblock In {\em Foundations of Intelligent Systems}, pages 101--110.
+  Springer, 2006.
+
+\bibitem{UAV_general}
+Piegl~LA Valavanis~K, Oh~P.
+\newblock {\em Unmanned aircraft systems.}
+\newblock Springer, New York, 2008.
+
+\bibitem{c1}
+Chin W. and Ntafos S.
+\newblock Optimum watchman routes. inform. process. lett.
+\newblock 1988.
+
+\bibitem{path_planning_UGV}
+Gabriely Yoav and Elon Rimon.
+\newblock Spanning-tree based coverage of continuous areas by a mobile robot.
+\newblock {\em Annals of Mathematics and Artificial Intelligence 31.1-4}, pages
+  77--98, 2001.
+
+\bibitem{zheng1992panoramic}
+Jiang~Yu Zheng and Saburo Tsuji.
+\newblock Panoramic representation for route recognition by a mobile robot.
+\newblock {\em International Journal of Computer Vision}, 9(1):55--76, 1992.
+
+\end{thebibliography}

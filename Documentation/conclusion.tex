@@ -1,0 +1,22 @@
+\chapter{Conclusion} \label{chap:conc}
+
+\section{Conclusion}
+In this thesis, the coverage path planning is addressed with a new approach. This approach is dealing with area coverage problem as two different challenges. The first challenge is the optimized choice of poses that guarantee maximum area coverage. The second challenge is path planning of these chosen poses.
+
+This thesis is considering nonregular areas. Evolutionary algorithms specifically genetic algorithm (GA) is used  and compared with other methods like particle swarm algorithm to solve the first problem of area coverage. GA approach efficiently cover 90\% of a given area. 
+
+Several path planning approaches were tested. The design of having the multi layer of path planning is taken into account. Three algorithms were implemented,tested and compared results were presented. In all the three algorithms, there are two layers of path planning.  The first layer is formulating the robot poses as cities and connect them to form a graph which resembles the travelling sales man problem (TSP). GA is used to solve TSP and generate a list of poses of the cities that will insure least length of tour.
+
+Then the second layer is different in the three algorithms. The first algorithm, takes the list of ranked poses and generate linear piecewise function linking all the poses. The second algorithm is using spline piecewise function instead of linear which generate smoother paths. Last but not least, the third approach, uses artificial potential field (APF) as the second layer of map representation and path planning. It is used mainly to avoid obstacles that appear on the map. Static obstacles are considered in this thesis. Efficiently traversing the map without the known falling in the trap of local minima.
+
+One of the drawbacks of APF is the vast amount of parameter tuning needed before having the efficient results. This tuning is dependent on many factors like; a scaling factor of both the attractive and repulsive potentials, the current heading of the robot. It is also dependent on the shape of the map. The initial and final goal location being traversed are influencing the potential field too.
+
+Some of the work presented in this thesis lead to a publication in URAI 2016 and will be presented in China on August 2016.
+
+\section{Future Work}
+\begin{itemize}
+\item Impose dynamic obstacles in the map to validate the artificial potential field. 
+\item Re-planning algorithms in real time can be tested.
+\item RRT can be a good alternative to being tried instead of the artificial potential field.
+\item The down camera of AR.Drone 2.0 is of low resolution. So thinking of attaching a camera to the drone and testing it will be of great importance for better results.
+\end{itemize}

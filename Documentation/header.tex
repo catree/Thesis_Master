@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a sample header for a sample dissertation. Fill in the name,
+% and the other information. LaTeX will work out the table of
+% content, the list of figures and of tables for you.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\thispagestyle{empty}
+
+% ******* Title page *******
+% **************************
+
+\vspace*{2cm}
+\begin{center}
+{\Large\bf Optimized UAV Waypoints selection for maximum area coverage\\} \vspace{2cm} {\large
+Mark Bastourous\\
+\vspace{1.5cm}
+LE2I - Laboratoire Electronique, Informatique et Image \\
+Universite Bourgogne Franche-Comte}\\
+
+\vspace{2 cm}
+\includegraphics[height=0.1\textheight]{figures/ublogo.png}
+
+
+\vspace{1.5cm}
+{\large Under supervsion of: \\
+David FOFI}
+\end{center}
+
+\vspace{2cm}
+\begin{center}
+{\large A Thesis Submitted for the Degree of \\MSc in Computer Vision 
+(MSCV) \\\vspace{0.3cm} $\cdot$ 2016
+$\cdot$}
+
+\end{center}
+\singlespacing
+
+
+%ABSTRACT
+\begin{abstract}
+Area coverage is a very crucial application in many domains. It requires time, precision, and sometimes repetition which prevails the important use of robots. Over many years in research, several robotics platforms on the ground, in aerial, or underwater have been studied,developed and tested. These robots can reach,navigate and execute tasks that humans are not capable of or can be tedious or harmful.
+
+Coverage path planning (CPP) is the problem of finding the most suitable path with least cost in terms of time, power, and dynamics that can cover a given area. In this work the CPP of unmanned aerial vehicles (UAV) problem is partitioned into optimally selecting the poses that will guarantee highest area coverage, then plan the path traversing these selected poses. Path planning is done in two stages consisting of; global and local planners. The global planner is responsible for generating the path with minimal length passing by the predefined waypoints. The local planner's role is to find the clear way in between these waypoints that will be used to build the robot's trajectory.
+\hfill
+
+The problem is approached from an optimization point of view. Genetic algorithm (GA) and particle swarm optimization (PSO) are tested to solve the problem of choosing the coverage waypoints. Then GA is re-used again to solve the global planner challenge. The robot poses from the coverage are formulated by the well-known computer science problem travelling salesman problem (TSP). Then several methods are tested to solve the local planner challenge like linear, spline piecewise, artificial potential field. After generating the path, in the phase of executing the UAV trajectory both in simulation and on the practical platform.   
+
+Promising simulation results on V-REP led to experimenting it on practical UAV from Parrot company which is called AR.drone 2.0. The acquired images are then mosaicked to show the coverage of the area with as minimal amount of images as possible. Images are acquired at the waypoints, not during the whole flights like what is common in the literature. This will significantly reduce the computation time needed to generate the final mosaick of the scene.
+
+\vspace*{4cm}
+
+
+%\begin{center}
+%\begin{quote}
+%\it Research is what I'm doing when I don't know what I'm
+%doing.\,\ldots
+%\end{quote}
+%\end{center}
+%\hfill{\small Werner von Braun}
+
+\end{abstract}
+
+\doublespacing
+
+%\pagestyle{empty}
+\pagenumbering{roman}
+\setcounter{page}{1} \pagestyle{plain}
+
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+\clearpage
+
+%\addcontentsline{toc}{chapter}{List of Abbreviations}
+%\printacronyms[name = Abbreviations]
+
+
+
+\chapter*{Acknowledgments}
+
+\addcontentsline{toc}{chapter}
+         {\protect\numberline{Acknowledgments\hspace{-96pt}}}
+%To be mentioned David Fofi , Morel , Strubl
+%,Family : Bro , Ma , Fa .
+I would like to express my deep gratitude to my professors for their tremendous help.  There are no words can describe my recognition to the effort, patience and guidance provided by my supervisor prof. David Fofi. Also i can not forget the great help and collaboration done by David Strubel during the whole thesis period. Helping me with all the possible ways he can. Also all the colleagues and stuff in LE2I lab where i have spent magnificent 5 months research internship experience. 
+
+ To all my new friends from MSCV6 and the previous or following batches.  For my old friends who are all the time showing support and understanding. 
+
+To my father, Nabil, whose memorial day is approaching and great eternal memory is giving me support, and the memory of my brother Michael, to my mother, Mervat. To my dear aunt Afaf, my uncle Ibrahim, Soliman for their great support. To the memory of my recently passing away uncle whom my studies were a barrier infront of not attending his funeral. Finally, special thanks to my family and parents for their unconditional and endless support to help me achieve who I am today.
+\pagestyle{fancy}
